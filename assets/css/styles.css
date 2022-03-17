@@ -1,0 +1,398 @@
+/* Styles */
+@font-face {
+    font-family: Titulo;
+    src: url(../font/BrotesqueR.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Cabin', sans-serif; 
+}
+
+p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #282828;    
+}
+
+h1 {
+    font-family: Titulo;
+    font-size: 40px;
+    color: #603a03;
+    letter-spacing: 5px;
+    margin-top: 5px;
+    margin: 0;
+}
+
+h2 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#FFF
+}
+
+h3 {
+	font-family:Titulo;
+	font-size:20px;
+	color:#603A03;
+}
+
+button {
+    height: 40px; 
+    width: 140px;
+    padding: 0 10px;    
+}
+
+/* Elements */
+#container {
+    width: 1000px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gameBG {
+    width: 1000px;
+    height: 630px;
+    background-image: url(../img/gameBG.jpg);
+    border-color: #fff;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#logo {
+    text-align: center;
+    color: #FFF;
+    font-size: 50px;
+    letter-spacing: 40px;
+    margin: 0;
+    padding-bottom: 10px;
+    text-shadow: #000000 0px 1px 3px;
+}
+
+#start {
+    width: 350px;
+    height: fit-content;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#controlsText {
+    margin: 8px;
+}
+
+#controls {
+    width: 340px;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#startButton {
+    color: #FFF;    
+    background-color: #603A03;
+    border: 2px solid #603A03;
+    border-radius: 5px;
+    cursor: pointer;    
+    -webkit-transition: 0.5s; 
+    transition: 0.5s;    
+    margin-bottom: 5px;
+}
+
+#startButton:hover {    
+    border: 2px solid #000000;   
+}
+
+#score {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 15px;
+	top: 585px;
+}
+
+#energy {
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	left: 855px;
+	top: 10px;	
+}
+
+#end {
+	width:350px;
+	height: fit-content;
+	background-color:#FFF;
+	text-align:center;
+	padding:10px;
+    border-radius: 10px;
+}
+
+#endText {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#restartButton {
+    color: #FFF;    
+    background-color: #603A03;
+    border: 2px solid #603A03;
+    border-radius: 5px;
+    cursor: pointer;    
+    -webkit-transition: 0.5s; 
+    transition: 0.5s;
+    margin-top: 20px; 
+    margin-bottom: 5px;   
+}
+
+#restartButton:hover {    
+    border: 2px solid #000000;   
+}
+
+/* Interactive elements */
+#player {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 8px;
+    top: 179px;
+    background-image: url(../img/apache.png);
+}
+
+#enemy1 {
+    width: 256px;
+    height: 66px;
+    position: absolute;
+    left: 745px;
+    top: 250px;
+    background-image: url(../img/enemy1.png);
+}
+
+#enemy2 {
+    width: 153px;
+    height: 70px;
+    position: absolute;
+    left: 845px;
+    top: 450px;
+    background-image: url(../img/enemy2.png);
+}
+
+#friend {
+    width: 44px;
+    height: 51px;
+    position: absolute;
+    left: 10px;
+    top: 465px;
+    background-image: url(../img/friend.png);
+}
+
+#shot {
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url(../img/shot.png);
+}
+
+
+/* Effects */
+#explosion1 {
+	width:15px;
+	height:87px;
+	position:absolute;
+}
+
+#explosion2 {
+	width:15px;
+	height:87px;
+	position:absolute;	
+}
+
+#explosion3 {
+	width:44px;
+	height:51px;
+	position:absolute;
+}
+
+/* Animations */
+.animPlayer {
+    background-image: url(../img/apache.png);
+    animation: playPlayer 0.5s steps(2) infinite;
+    -webkit-animation: playPlayer 0.5s steps(2) infinite;
+    -moz-animation: playPlayer 0.5s steps(2) infinite;
+    -ms-animation: playPlayer 0.5s steps(2) infinite;
+    -o-animation: playPlayer 0.5s steps(2) infinite;
+}
+
+@keyframes playPlayer {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-webkit-keyframes playPlayer {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-moz-keyframes playPlayer {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-ms-keyframes playPlayer {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-o-keyframes playPlayer {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+.animEnemy1 {
+    background-image: url(../img/enemy1.png);
+    animation: playEnemy1 0.5s steps(2) infinite;
+    -webkit-animation: playEnemy1 0.5s steps(2) infinite;
+    -moz-animation: playEnemy1 0.5s steps(2) infinite;
+    -ms-animation: playEnemy1 0.5s steps(2) infinite;
+    -o-animation: playEnemy1 0.5s steps(2) infinite;
+}
+
+@keyframes playEnemy1 {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-webkit-keyframes playEnemy1 {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-moz-keyframes playEnemy1 {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-ms-keyframes playEnemy1 {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+@-o-keyframes playEnemy1 {
+    from {        background-position: 0px;    }
+    to {        background-position: -512px;    }
+}
+
+.animEnemy2 {
+    background-image: url(../img/enemy2.png);
+    animation: playEnemy2 0.5s steps(2) infinite;
+    -webkit-animation: playEnemy2 0.5s steps(2) infinite;
+    -moz-animation: playEnemy2 0.5s steps(2) infinite;
+    -ms-animation: playEnemy2 0.5s steps(2) infinite;
+    -o-animation: playEnemy2 0.5s steps(2) infinite;
+}
+
+@keyframes playEnemy2 {
+    from {        background-position: 0px;    }
+    to {        background-position: -306px;    }
+}
+
+@-webkit-keyframes playEnemy2 {
+    from {        background-position: 0px;    }
+    to {        background-position: -306px;    }
+}
+
+@-moz-keyframes playEnemy2 {
+    from {        background-position: 0px;    }
+    to {        background-position: -306px;    }
+}
+
+@-ms-keyframes playEnemy2 {
+    from {        background-position: 0px;    }
+    to {        background-position: -306px;    }
+}
+
+@-o-keyframes playEnemy2 {
+    from {        background-position: 0px;    }
+    to {        background-position: -306px;    }
+}
+
+.animFriend {
+    background-image: url(../img/friend.png);
+    animation: playFriend 0.9s steps(12) infinite;
+    -webkit-animation: playFriend 0.9s steps(12) infinite;
+    -moz-animation: playFriend 0.9s steps(12) infinite;
+    -ms-animation: playFriend 0.9s steps(12) infinite;
+    -o-animation: playFriend 0.9s steps(12) infinite;
+}
+
+@keyframes playFriend {
+    from {        background-position: 0px;    }
+    to {        background-position: -528px;    }
+}
+
+@-webkit-keyframes playFriend {
+    from {        background-position: 0px;    }
+    to {        background-position: -528px;    }
+}
+
+@-moz-keyframes playFriend {
+    from {        background-position: 0px;    }
+    to {        background-position: -528px;    }
+}
+
+@-ms-keyframes playFriend {
+    from {        background-position: 0px;    }
+    to {        background-position: -528px;    }
+}
+
+@-o-keyframes playFriend {
+    from {        background-position: 0px;    }
+    to {        background-position: -528px;    }
+}
+
+.animFriendDeath {
+	width:44px;
+	height:51px;
+	background-image:url(../img/friendDeath.png);
+	animation:playFriendDeath .5s steps(7) infinite;
+	-webkit-animation: playFriendDeath .5s steps(7) infinite;
+    -moz-animation: playFriendDeath .5s steps(7) infinite;
+    -ms-animation: playFriendDeath .5s steps(7) infinite;
+    -o-animation: playFriendDeath .5s steps(7) infinite;
+}
+
+@keyframes playFriendDeath {
+	from {         background-position:0px;     }
+	to {        background-position:-308px;     }
+}
+
+@-webkit-keyframes playFriendDeath {
+    from {       background-position:    0px;        }
+    to {       background-position: -308px;        }
+}
+
+@-moz-keyframes playFriendDeath {
+    from {       background-position:    0px;        }
+    to {       background-position: -308px;        }
+}
+
+@-ms-keyframes playFriendDeath {
+    from {       background-position:    0px;        }
+    to {       background-position: -308px;        }
+}
+
+@-o-keyframes playFriendDeath {
+    from {       background-position:    0px;        }
+    to {       background-position: -308px;        }
+}

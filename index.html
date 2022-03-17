@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgate</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Audio -->
+    <audio src="assets/audio/sound.mp3" preload="auto" id="soundShot"></audio>
+    <audio src="assets/audio/explosion.mp3" preload="auto" id="soundExplosion"></audio>    
+    <audio src="assets/audio/musicBG.mp3" preload="auto" id="soundMusicBG"></audio>
+    <audio src="assets/audio/gameOver.mp3" preload="auto" id="soundGameOver"></audio>
+    <audio src="assets/audio/lost.mp3" preload="auto" id="soundLost"></audio>	
+    <audio src="assets/audio/rescue.mp3" preload="auto" id="soundRescue"></audio>
+    <audio src="assets/audio/crash.mp3" preload="auto" id="soundCrash"></audio>    
+
+</head>
+<header>
+    <h1 id="logo"><i class="fa fa-star"></i> Resgate <i class="fa fa-star"></i></h1>
+</header>
+<body>
+    
+    <div id="container">
+        <div id="gameBG">
+        
+            <div id="start"><h1> Resgate </h1>
+                <p id="controlsText">Controles:</p>
+                <img id="controls" src="assets/img/controls.jpg">
+                <button id="startButton" onclick=start()>Iniciar</button>            
+            </div> 
+            
+        </div> 
+    </div> 
+
+    <!-- JQuery -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/jquery-collision.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
